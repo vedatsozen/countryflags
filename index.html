@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<div id="top"><h1 class="left">Where in The World</h1><h1 class="right">Light Mode</h1></div>
+<div id="searchbar"><input id="searchid" type="search" value="Search For A Country" oninput="orderbycountry()">
+
+<select>
+    <option>Select by Region</option>
+    <option>Africa</option>
+    <option>America </option>
+    <option>Asia</option>
+    <option>Europe</option>
+    <option>Africa</option>
+
+</select>
+</div>
+<div id="containerid"></div>
+</body>
+
+<script>
+
+let containerDİV = document.querySelector("#containerid");
+containerDİV.classList.add("divfourflag");
+
+
+fetch("https://restcountries.com/v3.1/all")
+.then(response =>response.json())
+.then(responseJSON => {
+
+responseJSON.forEach(item => {
+
+let newDiv = document.createElement("div");
+let newImage = document.createElement("img");
+let countryName = document.createElement("p")
+let population = document.createElement("p")
+let region = document.createElement("p")
+let capital = document.createElement("p")
+newDiv.classList.add("myclass")
+newImage.src = item.flags.png
+countryName.innerHTML = item.name.common
+population.innerHTML = "Population : " + item.population
+region.innerHTML = "Region : " + item.region
+capital.innerHTML = "Capital : " + item.capital
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+newDiv.appendChild(newImage)
+newDiv.appendChild(countryName)
+newDiv.appendChild(population)
+newDiv.appendChild(region)
+newDiv.appendChild(capital)
+
+
+})
+
+})
+
+
+</script>
+
+</html>

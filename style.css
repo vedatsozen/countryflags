@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+}
+
+html,body {
+    padding: 0px;
+    background-color: hsl(207, 26%, 17%)
+
+}
+#top {
+
+margin: auto;
+height: 80px;
+width: 100%;
+background-color: black;
+color: white;
+display: flex;
+justify-content:space-between;
+align-items: center;
+font-size: 14px;
+
+}
+
+#searchbar {
+
+    margin: auto;
+    height: 80px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 14px;
+    
+    }
+
+h1.left {
+    margin: auto;
+    margin-left: 25px;
+
+}
+
+h1.right {
+    margin: auto;
+    margin-right: 25px;
+
+}
+
+input#searchid {
+    margin-left:25px ;
+    height:40px;
+    width:200px;
+}
+
+select {
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+li {
+    margin: auto;
+    text-decoration: none;
+    display: block;
+    background-color: darkred;
+    color: whitesmoke;
+    margin-top: 2px;
+    height: 30px;
+    padding: 3px;
+    width: fit-content;
+}
+
+div.myclass {
+
+    margin: auto;
+    height:350px;
+    width:250px;
+    padding:10px;
+    color: white;
+    margin-top: 20px;
+    font-family: Verdana;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(209, 23%, 22%)
+}
+
+p { font-size: 14px; }
+
+img {
+    height:150px;
+    width:250px;
+    border: 2px solid white;
+    margin-top: 10px;
+}
+
+.divfourflag {
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    width:1200px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+   
+  
+}
+
+h1 {
+    cursor:pointer;
+}
+
+.lightmode {
+
+background-color: hsl(0, 0%, 98%);
+cursor: pointer;
+
+}
+
+div.myclass2 {
+
+    margin: auto;
+    height:350px;
+    width:250px;
+    padding:10px;
+    color: black;
+    margin-top: 20px;
+    font-family: Verdana;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
