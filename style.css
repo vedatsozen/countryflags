@@ -165,7 +165,7 @@ div.myclass2 {
     
     margin: auto;
     height: 80px;
-    width: 100%;
+    width: 90%;
     background-color: black;
     color: white;
     display: flex;
@@ -179,7 +179,7 @@ div.myclass2 {
     
         margin: auto;
         height: 80px;
-        width: 100%;
+        width: 90%;
         color: white;
         display: flex;
         justify-content:baseline;
