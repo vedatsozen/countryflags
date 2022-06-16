@@ -165,7 +165,7 @@ div.myclass2 {
     
     margin: auto;
     height: 80px;
-    width: 90%;
+    width: 100%;
     background-color: black;
     color: white;
     display: flex;
@@ -179,7 +179,7 @@ div.myclass2 {
     
         margin: auto;
         height: 80px;
-        width: 90%;
+        width: 100%;
         color: white;
         display: flex;
         justify-content:baseline;
@@ -203,7 +203,7 @@ div.myclass2 {
     input#searchid {
         margin-left:25px ;
         height:40px;
-        width:200px;
+        width:150px;
     }
     
     select {
