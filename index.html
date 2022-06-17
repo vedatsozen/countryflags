@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country Flags App / Getting Data with Fetch from a Country Api</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +12,25 @@
 </head>
 <body>
 <div id="top"><h1 class="left">Where in The World</h1><h1 class="right">Light Mode</h1></div>
-<div id="searchbar"><input id="searchid" type="search" value="Search For A Country" oninput="orderbycountry()">
-<br>
-<br>
-<select>
-    <option>Select by Region</option>
-    <option>Africa</option>
-    <option>America </option>
-    <option>Asia</option>
-    <option>Europe</option>
-    <option>Africa</option>
+
+<div id="searchbar"><input id="searchid" type="search" onchange="showcountry()">
+
+<select id="selectid">
+    
+    <option value="africa">Africa</option>
+    <option value="america">America </option>
+    <option value="asia">Asia</option>
+    <option value="europe">Europe</option>
+    
 
 </select>
+
+<button type="button" onclick="filterbyregion()">Submit</button>
+
 </div>
+
 <div id="containerid"></div>
+
 </body>
 
 <script>
@@ -66,6 +71,188 @@ newDiv.appendChild(capital)
 })
 
 })
+
+function filterbyregion() {
+
+const countryvalue = document.getElementById("selectid").value;
+
+alert(countryvalue)
+
+if ( countryvalue == "europe" ) {
+
+let containerDİV = document.querySelector("#containerid");
+containerDİV.classList.add("divfourflag");
+
+
+fetch("https://restcountries.com/v3.1/region/europe")
+.then(response =>response.json())
+.then(responseJSON => {
+
+responseJSON.forEach(item => {
+
+let newDiv = document.createElement("div");
+let newImage = document.createElement("img");
+let countryName = document.createElement("p")
+let population = document.createElement("p")
+let region = document.createElement("p")
+let capital = document.createElement("p")
+newDiv.classList.add("myclass")
+newImage.src = item.flags.png
+countryName.innerHTML = item.name.common
+population.innerHTML = "Population : " + item.population
+region.innerHTML = "Region : " + item.region
+capital.innerHTML = "Capital : " + item.capital
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+newDiv.appendChild(newImage)
+newDiv.appendChild(countryName)
+newDiv.appendChild(population)
+newDiv.appendChild(region)
+newDiv.appendChild(capital)
+
+
+})
+
+})
+
+
+}
+
+if ( countryvalue == "asia") 
+
+{
+
+let containerDİV = document.querySelector("#containerid");
+containerDİV.classList.add("divfourflag");
+
+
+fetch("https://restcountries.com/v3.1/region/asia")
+.then(response =>response.json())
+.then(responseJSON => {
+
+responseJSON.forEach(item => {
+
+let newDiv = document.createElement("div");
+let newImage = document.createElement("img");
+let countryName = document.createElement("p")
+let population = document.createElement("p")
+let region = document.createElement("p")
+let capital = document.createElement("p")
+newDiv.classList.add("myclass")
+newImage.src = item.flags.png
+countryName.innerHTML = item.name.common
+population.innerHTML = "Population : " + item.population
+region.innerHTML = "Region : " + item.region
+capital.innerHTML = "Capital : " + item.capital
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+newDiv.appendChild(newImage)
+newDiv.appendChild(countryName)
+newDiv.appendChild(population)
+newDiv.appendChild(region)
+newDiv.appendChild(capital)
+
+
+})
+
+})
+
+
+}
+
+if ( countryvalue == "africa")
+
+{
+
+let containerDİV = document.querySelector("#containerid");
+containerDİV.classList.add("divfourflag");
+
+
+fetch("https://restcountries.com/v3.1/region/africa")
+.then(response =>response.json())
+.then(responseJSON => {
+
+responseJSON.forEach(item => {
+
+let newDiv = document.createElement("div");
+let newImage = document.createElement("img");
+let countryName = document.createElement("p")
+let population = document.createElement("p")
+let region = document.createElement("p")
+let capital = document.createElement("p")
+newDiv.classList.add("myclass")
+newImage.src = item.flags.png
+countryName.innerHTML = item.name.common
+population.innerHTML = "Population : " + item.population
+region.innerHTML = "Region : " + item.region
+capital.innerHTML = "Capital : " + item.capital
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+newDiv.appendChild(newImage)
+newDiv.appendChild(countryName)
+newDiv.appendChild(population)
+newDiv.appendChild(region)
+newDiv.appendChild(capital)
+
+
+})
+
+})
+
+
+}
+
+if ( countryvalue == "america")
+
+{
+
+let containerDİV = document.querySelector("#containerid");
+containerDİV.classList.add("divfourflag");
+
+
+fetch("https://restcountries.com/v3.1/region/america")
+.then(response =>response.json())
+.then(responseJSON => {
+
+responseJSON.forEach(item => {
+
+let newDiv = document.createElement("div");
+let newImage = document.createElement("img");
+let countryName = document.createElement("p")
+let population = document.createElement("p")
+let region = document.createElement("p")
+let capital = document.createElement("p")
+newDiv.classList.add("myclass")
+newImage.src = item.flags.png
+countryName.innerHTML = item.name.common
+population.innerHTML = "Population : " + item.population
+region.innerHTML = "Region : " + item.region
+capital.innerHTML = "Capital : " + item.capital
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+containerDİV.appendChild(newDiv)
+newDiv.appendChild(newImage)
+newDiv.appendChild(countryName)
+newDiv.appendChild(population)
+newDiv.appendChild(region)
+newDiv.appendChild(capital)
+
+
+})
+
+})
+
+
+}
+
+}
 
 
 </script>
