@@ -181,7 +181,7 @@
         #searchbar {
         
             margin: auto;
-            height:fit-content;
+            height:400px;
             width: 100%;
             color: white;
             display: flex;
@@ -190,7 +190,7 @@
             align-items: center;
             font-size:12px;
             padding:10px;
-            box-sizing:border-box;
+            
 
             
             }
