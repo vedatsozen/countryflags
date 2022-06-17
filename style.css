@@ -26,6 +26,7 @@
         width: 100%;
         color: white;
         display: flex;
+        flex-direction:row;
         justify-content:center;
         align-items: center;
         font-size: 14px;
