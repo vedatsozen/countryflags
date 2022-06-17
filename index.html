@@ -11,21 +11,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" rel="stylesheet"> 
 </head>
 <body>
-<div id="top"><h1 class="left">Where in The World</h1><h1 class="right">Light Mode</h1></div>
 
-<div id="searchbar"><input id="searchid" type="search" onchange="showcountry()">
+<div id="searchbar">Enter Country Name <input type="search" id="searchid">
+
+<button onclick="showcountry()">Submit</button>
+
+<p>Choose A Region</p>
 
 <select id="selectid">
-    
+
     <option value="africa">Africa</option>
-    <option value="america">America </option>
+    <option value="americas">America</option>
     <option value="asia">Asia</option>
     <option value="europe">Europe</option>
+    <option value="oceania">Oceania</option>
+    
+    
     
 
 </select>
 
 <button type="button" onclick="filterbyregion()">Submit</button>
+
+<button type="button" onclick="allcountries()">ALL COUNTRIES</button>
 
 </div>
 
@@ -38,8 +46,7 @@
 let containerDİV = document.querySelector("#containerid");
 containerDİV.classList.add("divfourflag");
 
-
-fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/all/")
 .then(response =>response.json())
 .then(responseJSON => {
 
@@ -71,20 +78,15 @@ newDiv.appendChild(capital)
 })
 
 })
+
 
 function filterbyregion() {
 
+containerDİV.innerHTML = " " ;
+
 const countryvalue = document.getElementById("selectid").value;
 
-alert(countryvalue)
-
-if ( countryvalue == "europe" ) {
-
-let containerDİV = document.querySelector("#containerid");
-containerDİV.classList.add("divfourflag");
-
-
-fetch("https://restcountries.com/v3.1/region/europe")
+fetch("https://restcountries.com/v3.1/region/" + countryvalue)
 .then(response =>response.json())
 .then(responseJSON => {
 
@@ -117,18 +119,15 @@ newDiv.appendChild(capital)
 
 })
 
-
 }
 
-if ( countryvalue == "asia") 
+function showcountry() {
 
-{
+containerDİV.innerHTML = " " ;
 
-let containerDİV = document.querySelector("#containerid");
-containerDİV.classList.add("divfourflag");
+const countryinputvalue = document.getElementById("searchid").value;
 
-
-fetch("https://restcountries.com/v3.1/region/asia")
+fetch("https://restcountries.com/v3.1/name/" + countryinputvalue)
 .then(response =>response.json())
 .then(responseJSON => {
 
@@ -160,23 +159,20 @@ newDiv.appendChild(capital)
 })
 
 })
-
-
+    
 }
 
-if ( countryvalue == "africa")
+function allcountries() {
 
-{
+containerDİV.innerHTML = " " ;
 
-let containerDİV = document.querySelector("#containerid");
-containerDİV.classList.add("divfourflag");
-
-
-fetch("https://restcountries.com/v3.1/region/africa")
+fetch("https://restcountries.com/v3.1/all/")
 .then(response =>response.json())
 .then(responseJSON => {
 
+
 responseJSON.forEach(item => {
+
 
 let newDiv = document.createElement("div");
 let newImage = document.createElement("img");
@@ -199,61 +195,13 @@ newDiv.appendChild(countryName)
 newDiv.appendChild(population)
 newDiv.appendChild(region)
 newDiv.appendChild(capital)
-
-
-})
+alert(responseJSON.length)
 
 })
 
+})
 
 }
-
-if ( countryvalue == "america")
-
-{
-
-let containerDİV = document.querySelector("#containerid");
-containerDİV.classList.add("divfourflag");
-
-
-fetch("https://restcountries.com/v3.1/region/america")
-.then(response =>response.json())
-.then(responseJSON => {
-
-responseJSON.forEach(item => {
-
-let newDiv = document.createElement("div");
-let newImage = document.createElement("img");
-let countryName = document.createElement("p")
-let population = document.createElement("p")
-let region = document.createElement("p")
-let capital = document.createElement("p")
-newDiv.classList.add("myclass")
-newImage.src = item.flags.png
-countryName.innerHTML = item.name.common
-population.innerHTML = "Population : " + item.population
-region.innerHTML = "Region : " + item.region
-capital.innerHTML = "Capital : " + item.capital
-containerDİV.appendChild(newDiv)
-containerDİV.appendChild(newDiv)
-containerDİV.appendChild(newDiv)
-containerDİV.appendChild(newDiv)
-newDiv.appendChild(newImage)
-newDiv.appendChild(countryName)
-newDiv.appendChild(population)
-newDiv.appendChild(region)
-newDiv.appendChild(capital)
-
-
-})
-
-})
-
-
-}
-
-}
-
 
 </script>
 
