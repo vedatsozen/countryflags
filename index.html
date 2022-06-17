@@ -12,11 +12,17 @@
 </head>
 <body>
 
-<div id="searchbar">Enter Country Name <input type="search" id="searchid">
+<div id="searchbar">
+    <table>
+        <tr>
+            <td>Enter Country Name</td>
+            <td>input type="search" id="searchid"></td>
+            <td><button onclick="showcountry()">Submit</button></td>
+            <td>Choose a region</td>
+            <td>
 
-<button onclick="showcountry()">Submit</button>
 
-<p>Choose A Region</p>
+
 
 <select id="selectid">
 
@@ -29,11 +35,16 @@
     
     
 
-</select>
+</select></td>
+        
+            <td><button type="button" onclick="filterbyregion()">Submit</button></td>
 
-<button type="button" onclick="filterbyregion()">Submit</button>
 
-<button type="button" onclick="allcountries()">ALL COUNTRIES</button>
+
+            <td><button type="button" onclick="allcountries()">ALL COUNTRIES</button></td>
+            
+        </tr>
+    </table>
 
 </div>
 
