@@ -1,153 +1,5 @@
 @media only screen and (min-width:480px) {
 
-* {
-    margin: 0px;
-    padding: 0px;
-    font-size: 14px;
-    font-family: 'Nunito Sans', sans-serif;
-    text-align: center;
-}
-
-html,body {
-    padding: 0px;
-    background-color: hsl(207, 26%, 17%)
-
-}
-#top {
-
-margin: auto;
-height: 80px;
-width: 100%;
-background-color: black;
-color: white;
-display: flex;
-justify-content:space-between;
-align-items: center;
-font-size: 14px;
-
-}
-
-#searchbar {
-
-    margin: auto;
-    height: 80px;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content:baseline;
-    align-items: center;
-    font-size: 14px;
-    
-    }
-
-h1.left {
-    margin: auto;
-    margin-left: 25px;
-
-}
-
-h1.right {
-    margin: auto;
-    margin-right: 25px;
-
-}
-
-input#searchid {
-    margin-left:25px ;
-    height:40px;
-    width:200px;
-}
-
-select {
-    height: 50px;
-    width: 150px;
-    cursor: pointer;
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-li {
-    margin: auto;
-    text-decoration: none;
-    display: block;
-    background-color: darkred;
-    color: whitesmoke;
-    margin-top: 2px;
-    height: 30px;
-    padding: 3px;
-    width: fit-content;
-}
-
-div.myclass {
-
-    margin: auto;
-    height:350px;
-    width:250px;
-    padding:10px;
-    color: white;
-    margin-top: 20px;
-    font-family: Verdana;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: hsl(209, 23%, 22%)
-}
-
-p { font-size: 14px; }
-
-img {
-    height:150px;
-    width:250px;
-    border: 2px solid white;
-    margin-top: 10px;
-}
-
-.divfourflag {
-    margin: auto;
-    margin-top: 10px;
-    height: fit-content;
-    width:1200px;
-    display:flex;
-    justify-content: space-around;
-    flex-wrap:wrap;
-   
-  
-}
-
-h1 {
-    cursor:pointer;
-}
-
-.lightmode {
-
-background-color: hsl(0, 0%, 98%);
-cursor: pointer;
-
-}
-
-div.myclass2 {
-
-    margin: auto;
-    height:350px;
-    width:250px;
-    padding:10px;
-    color: black;
-    margin-top: 20px;
-    font-family: Verdana;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
-
-}
-
-/* FOR MOBILE PHONES / RESPONSIVE */
-
-@media only screen and (max-width:480px) {
-
     * {
         margin: 0px;
         padding: 0px;
@@ -161,19 +13,11 @@ div.myclass2 {
         background-color: hsl(207, 26%, 17%)
     
     }
-    #top {
-    
-    margin: auto;
-    height: 80px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    font-size: 14px;
-    
+
+    body {
+        margin-top: 10px;
     }
+
     
     #searchbar {
     
@@ -182,7 +26,7 @@ div.myclass2 {
         width: 100%;
         color: white;
         display: flex;
-        justify-content:baseline;
+        justify-content:center;
         align-items: center;
         font-size: 14px;
         
@@ -203,14 +47,13 @@ div.myclass2 {
     input#searchid {
         margin-left:25px ;
         height:40px;
-        width:150px;
+        width:200px;
     }
     
     select {
         height: 50px;
         width: 150px;
         cursor: pointer;
-        margin-right: 25px;
         margin-left: 25px;
     }
     
@@ -242,7 +85,7 @@ div.myclass2 {
         background-color: hsl(209, 23%, 22%)
     }
     
-    p { font-size: 14px; }
+    p { font-size: 14px; margin-left: 10px;}
     
     img {
         height:150px;
@@ -255,7 +98,7 @@ div.myclass2 {
         margin: auto;
         margin-top: 10px;
         height: fit-content;
-        width:100%;
+        width:1200px;
         display:flex;
         justify-content: space-around;
         flex-wrap:wrap;
@@ -289,6 +132,184 @@ div.myclass2 {
         align-items: center;
         background-color: white;
     }
-    
+
+    button {
+        margin-left: 10px;
+        padding: 5px;
+        cursor: pointer;
+        background-color: darkred;
+        color: white;
+        border-radius: 3px;
+        border: none;
+
+        
     }
 
+    button:hover {
+        background-color: gold;
+    }
+
+    button:active {
+        transform: scale(0.8);
+    }
+    
+    }
+    
+    /* FOR MOBILE PHONES / RESPONSIVE */
+    
+    @media only screen and (max-width:480px) {
+    
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 14px;
+            font-family: 'Nunito Sans', sans-serif;
+            text-align: center;
+        }
+        
+        html,body {
+            padding: 0px;
+            background-color: hsl(207, 26%, 17%)
+        
+        }
+       
+        body {
+            margin-top: 10px;
+        }
+        
+        #searchbar {
+        
+            margin: auto;
+            height: 80px;
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content:baseline;
+            align-items: center;
+            font-size: 14px;
+            
+            }
+        
+        h1.left {
+            margin: auto;
+            margin-left: 25px;
+        
+        }
+        
+        h1.right {
+            margin: auto;
+            margin-right: 25px;
+        
+        }
+        
+        input#searchid {
+            margin-left:25px ;
+            height:40px;
+            width:150px;
+        }
+        
+        select {
+            height: 50px;
+            width: 150px;
+            cursor: pointer;
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+        
+        li {
+            margin: auto;
+            text-decoration: none;
+            display: block;
+            background-color: darkred;
+            color: whitesmoke;
+            margin-top: 2px;
+            height: 30px;
+            padding: 3px;
+            width: fit-content;
+        }
+        
+        div.myclass {
+        
+            margin: auto;
+            height:350px;
+            width:250px;
+            padding:10px;
+            color: white;
+            margin-top: 20px;
+            font-family: Verdana;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: hsl(209, 23%, 22%)
+        }
+        
+        p { font-size: 14px; }
+        
+        img {
+            height:150px;
+            width:250px;
+            border: 2px solid white;
+            margin-top: 10px;
+        }
+        
+        .divfourflag {
+            margin: auto;
+            margin-top: 10px;
+            height: fit-content;
+            width:100%;
+            display:flex;
+            justify-content: space-around;
+            flex-wrap:wrap;
+           
+          
+        }
+        
+        h1 {
+            cursor:pointer;
+        }
+        
+        .lightmode {
+        
+        background-color: hsl(0, 0%, 98%);
+        cursor: pointer;
+        
+        }
+        
+        div.myclass2 {
+        
+            margin: auto;
+            height:350px;
+            width:250px;
+            padding:10px;
+            color: black;
+            margin-top: 20px;
+            font-family: Verdana;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+        
+        button {
+            margin-left: 10px;
+            padding: 5px;
+            cursor: pointer;
+            background-color: darkred;
+            color: white;
+            border-radius: 3px;
+            border: none;
+    
+            
+        }
+    
+        button:hover {
+            background-color: gold;
+        }
+    
+        button:active {
+            transform: scale(0.8);
+        }
+        
+        }
