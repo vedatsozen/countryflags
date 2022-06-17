@@ -180,11 +180,12 @@
         #searchbar {
         
             margin: auto;
-            height: 80px;
+            height:fit-content;
             width: 100%;
             color: white;
             display: flex;
-            justify-content:baseline;
+           flex-direction:column;
+            justify-content:center;
             align-items: center;
             font-size: 14px;
             
