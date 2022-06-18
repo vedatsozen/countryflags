@@ -26,27 +26,30 @@
         width: 100%;
         color: white;
         display: flex;
-        flex-direction:row;
         justify-content:center;
         align-items: center;
         font-size: 14px;
         
         }
-    
-    h1.left {
-        margin: auto;
-        margin-left: 25px;
-    
-    }
-    
-    h1.right {
-        margin: auto;
-        margin-right: 25px;
-    
-    }
+
+        table {
+            margin:auto;
+
+        }
+
+        table tr td 
+        
+        {
+            height:50px;
+            width:fit-content;
+            
+            padding: 5px;
+            
+            
+        }
+
     
     input#searchid {
-        margin:auto;
         
         height:40px;
         width:200px;
@@ -136,7 +139,7 @@
     }
 
     button {
-        margin-left: 10px;
+        
         padding: 5px;
         cursor: pointer;
         background-color: darkred;
@@ -182,17 +185,13 @@
         #searchbar {
         
             margin: auto;
-            height:400px;
+            height: 80px;
             width: 100%;
             color: white;
             display: flex;
-           flex-direction:column;
-            justify-content:space-between;
+            justify-content:baseline;
             align-items: center;
-            font-size:12px;
-            padding:10px;
-            
-
+            font-size: 14px;
             
             }
         
@@ -317,5 +316,6 @@
         button:active {
             transform: scale(0.8);
         }
-        
+
         }
+    
