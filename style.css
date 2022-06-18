@@ -28,7 +28,7 @@
         display: flex;
         justify-content:center;
         align-items: center;
-        font-size:9px;
+        font-size: 14px;
         
         }
 
@@ -40,7 +40,7 @@
         table tr td 
         
         {
-            height:500px;
+            height:50px;
             width:fit-content;
             
             padding: 5px;
@@ -181,13 +181,10 @@
         body {
             margin-top: 10px;
         }
-       
-     
         
         #searchbar {
         
             margin: auto;
-            
             height: 80px;
             width: 100%;
             color: white;
@@ -197,27 +194,17 @@
             font-size: 14px;
             
             }
-
-   table {
-            margin:auto;
-      margin-bottom:5px;
-
-        }
-
-        table tr td 
         
-        {
-            height:50px;
-            width:fit-content;
-            
-            padding: 5px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-            
-            
+        h1.left {
+            margin: auto;
+            margin-left: 25px;
+        
+        }
+        
+        h1.right {
+            margin: auto;
+            margin-right: 25px;
+        
         }
         
         input#searchid {
